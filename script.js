@@ -32,6 +32,6 @@ contactForm?.addEventListener('submit', (event) => {
   const formData = new FormData(contactForm);
   const subject = encodeURIComponent(`Portfolio enquiry from ${formData.get('name')}`);
   const body = encodeURIComponent(`Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\n${formData.get('message')}`);
-  window.location.href = `mailto:pooja.punj@example.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:punjpooja26@gmail.com?subject=${subject}&body=${body}`;
   formStatus.textContent = 'Opening your email client...';
 });
