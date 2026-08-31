@@ -1,0 +1,24 @@
+POOJA PUNJ
+AI/ML ENGINEER & BACKEND DEVELOPER
+
+CONTACT
+Email: pooja.punj@example.com
+Location: Punjab, India
+
+EDUCATION
+B.E. Computer Science
+GNA University | 2023-2027
+
+PROFILE
+Computer Science student and builder focused on artificial intelligence, automation, and dependable backend systems.
+
+SELECTED PROJECTS
+- Spotify Dashboard | Python, Power BI, Pandas
+- n8n Workflow Automation Suite | n8n, Webhooks, APIs
+- AI Chatbot with HubSpot CRM Integration | OpenAI API, HubSpot, FastAPI
+- Student Performance Prediction | Scikit-learn, Python
+- Sentiment Analysis | NLP, Python, NLTK
+- AI Object Detection | OpenCV, YOLO, Python
+
+SKILLS
+Python, Java, JavaScript, SQL, Machine Learning, NLP, Computer Vision, Scikit-learn, TensorFlow, FastAPI, REST APIs, Node.js, OpenAI API, n8n, Git, HubSpot, PostgreSQL, MySQL, Pandas, Power BI, Matplotlib
