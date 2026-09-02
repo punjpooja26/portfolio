@@ -24,6 +24,39 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
+// ScrollSpy Navigation Active Highlight & Back To Top Button
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.site-nav a');
+const backToTopBtn = document.querySelector('#back-to-top');
+
+window.addEventListener('scroll', () => {
+  let currentSectionId = '';
+  const scrollY = window.scrollY;
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 140;
+    const sectionHeight = section.offsetHeight;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      currentSectionId = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSectionId}`) {
+      link.classList.add('active');
+    }
+  });
+
+  if (backToTopBtn) {
+    if (scrollY > 400) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }
+});
+
 const contactForm = document.querySelector('#contact-form');
 const formStatus = document.querySelector('#form-status');
 
@@ -33,5 +66,9 @@ contactForm?.addEventListener('submit', (event) => {
   const subject = encodeURIComponent(`Portfolio enquiry from ${formData.get('name')}`);
   const body = encodeURIComponent(`Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\n${formData.get('message')}`);
   window.location.href = `mailto:punjpooja26@gmail.com?subject=${subject}&body=${body}`;
-  formStatus.textContent = 'Opening your email client...';
+  if (formStatus) {
+    formStatus.textContent = 'Opening your email client...';
+    formStatus.style.color = 'var(--navy)';
+    formStatus.style.fontWeight = '600';
+  }
 });
